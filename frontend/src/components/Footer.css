@@ -9,12 +9,22 @@
     background: rgba(0, 0, 0, 0.6);
     color: #fff;
     z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .footer .author {
+    font-weight: bold; 
   }
   
   .footer a {
     color: #00d1ff;
     text-decoration: none;
     font-weight: 500;
+    display: inline-flex;
+    align-items: center;
   }
   
   .footer a:hover {
