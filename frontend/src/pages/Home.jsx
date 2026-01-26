@@ -12,16 +12,20 @@ function Home() {
           className="card teclado"
           onClick={() => navigate("/transposer/teclado")}
         >
+          <div className="texto">
           <h1>🎹 Teclado</h1>
           <p>Usar transposer</p>
+          </div>
         </div>
 
         <div
           className="card violao"
           onClick={() => navigate("/transposer/violao")}
         >
+          <div className="texto">
           <h1>🎸 Violão</h1>
           <p>Usar capotraste</p>
+          </div>
         </div>
       </div>
 

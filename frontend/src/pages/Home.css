@@ -1,30 +1,86 @@
+body{
+  margin: 0;
+  padding: 0;
+}
 .container {
-    display: flex;
-    height: 100vh;
-  }
-  
-  .card {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transition: 0.3s;
-    font-family: Arial, sans-serif;
-  }
-  
-  .card:hover {
-    transform: scale(1.02);
-  }
-  
-  .teclado {
-    background-color: #111;
-    color: #fff;
-  }
-  
-  .violao {
-    background-color: #f5f5f5;
-    color: #111;
-  }
-  
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+.card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+/* .card:hover {
+  transform: scale(1.02);
+} */
+
+
+/* O before edita somente a imagem de fundo sem alterar o .card */
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(5px);
+  transition: transform 0.3s ease;
+  z-index: -1;
+}
+
+/* .card:hover::before {
+  transform: scale(1.2);
+} */
+
+
+
+.teclado::before {
+  background-image: url(../../public/tecladowallpaper.jpg);
+  transform: scaleX(-1) scale(1.1);
+}
+
+.teclado:hover::before {
+  transform: scaleX(-1) scale(1.2);
+  transition: transform 0.3s ease;
+}
+
+.violao:hover::before {
+  transform: scale(1.2);
+  transition: transform 0.3s ease;
+}
+
+
+.violao::before {
+  background-image: url(../../public/violaowallpaper.jpg);
+  transform: scale(1.1);
+}
+
+.texto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 20rem;
+  height: 10rem;
+  border-radius: 10px;
+}
+
+.teclado .texto {
+  background: rgba(0, 0, 0, 0.600);
+  color: #fff;
+}
+
+.violao .texto {
+  background: rgba(255, 255, 255, 0.600);
+  color: #111;
+}
