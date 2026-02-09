@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useState } from "react";
 import "./Transposer.css";
+import { useNavigate } from "react-router-dom";
 import Footer from "../components/Footer";
 
 const NOTES = [
@@ -25,6 +26,7 @@ const NOTES = [
 
 function Transposer() {
   const { mode } = useParams();
+  const navigate = useNavigate();
 
   const [original, setOriginal] = useState("C");
   const [target, setTarget] = useState("C");
@@ -36,7 +38,8 @@ function Transposer() {
     setResult(null);
 
     try {
-      const response = await fetch("https://musicode-6u9c.onrender.com/api/calculate/", {
+      // const response = await fetch("https://musicode-6u9c.onrender.com/api/calculate/", {
+      const response = await fetch("http://127.0.0.1:8000/api/calculate/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -62,6 +65,7 @@ function Transposer() {
         flexDirection: "column",
       }}
     >
+    <div className="bnt-voltar" onClick={() => navigate("http://localhost:3000")}>voltar</div>
       <div
         style={{
           flex: 1,

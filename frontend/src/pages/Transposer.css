@@ -35,8 +35,25 @@
     border-radius: 8px;
     border: none;
     font-size: 16px;
+
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    outline: none;
+
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='black'><path d='M7 10l5 5 5-5z'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 2rem;
+    padding-right: 30px;
+
   }
-  
+
+  select:focus {
+    outline: none;
+  }
+
   button {
     width: 100%;
     margin-top: 25px;
@@ -70,5 +87,17 @@
   
   .result p {
     opacity: 0.9;
+  }
+
+  .bnt-voltar {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 15px;
+    background: #ffcc00;
+    color: #111;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
   }
   
