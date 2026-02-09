@@ -38,8 +38,8 @@ function Transposer() {
     setResult(null);
 
     try {
-      // const response = await fetch("https://musicode-6u9c.onrender.com/api/calculate/", {
-      const response = await fetch("http://127.0.0.1:8000/api/calculate/", {
+      const response = await fetch("https://musicode-6u9c.onrender.com/api/calculate/", {
+      // const response = await fetch("http://127.0.0.1:8000/api/calculate/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -65,7 +65,7 @@ function Transposer() {
         flexDirection: "column",
       }}
     >
-    <div className="bnt-voltar" onClick={() => navigate("http://localhost:3000")}>voltar</div>
+    <div className="bnt-voltar" onClick={() => navigate("https://musicode-frontend.onrender.com")}>voltar</div>
       <div
         style={{
           flex: 1,
