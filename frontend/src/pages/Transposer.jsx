@@ -65,7 +65,7 @@ function Transposer() {
         flexDirection: "column",
       }}
     >
-    <div className="bnt-voltar" onClick={() => navigate("https://musicode-frontend.onrender.com")}>voltar</div>
+    <div className="bnt-voltar" onClick={() => navigate("/")}>voltar</div>
       <div
         style={{
           flex: 1,
